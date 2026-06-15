@@ -6,7 +6,7 @@
 ;; Maintainer: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/MSW-cmty/mlua-mode
 ;; Version: 0.1.0
-;; Package-Requires: ((emacs "26.1") (lua-mode ))
+;; Package-Requires: ((emacs "26.1") (lua-mode "0.1.0"))
 ;; Keywords: languages
 
 ;; This file is not part of GNU Emacs.
@@ -34,13 +34,7 @@
 (defvar mlua-mode-hook nil)
 
 (defconst mlua-keywords
-  '("break" "continue" "do" "else" "elseif" "end"
-    "for" "function" "goto" "if" "in"
-    "local" "not" "or" "repeat" "return"
-    "then" "until" "while"
-
-    ;; mLua additions
-    "script" "method" "property" "member"
+  '("script" "method" "property" "member"
     "extends" "override" "handler"
     "constructor" "operator" "emitter"
     "static" "readonly"))
@@ -127,7 +121,9 @@
 ;;;###autoload
 (define-derived-mode mlua-mode lua-mode "mLua"
   "Major mode for mLua."
-  (font-lock-add-keywords nil mlua-font-lock-keywords))
+  (font-lock-add-keywords nil mlua-font-lock-keywords)
+
+  (setq-local indent-line-function #'lua-indent-line))
 
 ;;;###autoload
 (add-to-list 'auto-mode-alist '("\\.mlua\\'" . mlua-mode))
