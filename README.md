@@ -4,6 +4,8 @@
 # mlua-mode
 > Major mode for mLua
 
+[![CI](https://github.com/MSW-cmty/mlua-mode/actions/workflows/test.yml/badge.svg)](https://github.com/MSW-cmty/mlua-mode/actions/workflows/test.yml)
+
 WIP
 
 ## 🛠️ Contribute
