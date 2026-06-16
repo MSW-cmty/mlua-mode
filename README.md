@@ -6,7 +6,7 @@
 
 [![CI](https://github.com/MSW-cmty/mlua-mode/actions/workflows/test.yml/badge.svg)](https://github.com/MSW-cmty/mlua-mode/actions/workflows/test.yml)
 
-WIP
+![](./etc/1.png)
 
 ## 🛠️ Contribute
 
